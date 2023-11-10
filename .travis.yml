@@ -11,7 +11,7 @@ script:
 
 after_success:
   - docker build -t vilastadoori/multi-client ./client
-  - docker build -t vilastadoori/multi-ngnix  ./nginx
+  - docker build -t vilastadoori/multi-nginx ./nginx
   - docker build -t vilastadoori/multi-server ./server
   - docker build -t vilastadoori/multi-worker ./worker
 
