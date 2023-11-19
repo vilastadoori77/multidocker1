@@ -24,10 +24,10 @@ after_success:
     app:  multi-docker
     env:  Multi-docker-env
     bucket_name:  elasticbeanstalk-us-east-2-105366316698
-    buckt_path: docker-multi
+    bucket_path: docker-multi
     on:
       branch: master
-    access_key_id:  $AWS_ACCESS_KEY
+    access_key_id: $AWS_ACCESS_KEY
     secret_access_key:
       secure: $AWS_SECRET_KEY
 
