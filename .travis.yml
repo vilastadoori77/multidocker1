@@ -17,3 +17,18 @@ after_success:
   - docker push vilastadoori/multi-ngnix
   - docker push vilastadoori/multi-server
   - docker push vilastadoori/multi-worker
+
+  deploy:
+    provider: elasticbeanstalk
+    region: us-east-1
+    app:  multi-docker
+    env:  Multi-docker-env
+    bucket_name:  elasticbeanstalk-us-east-2-105366316698
+    buckt_path: docker-multi
+    on:
+      branch: master
+    access_key_id:  $AWS_ACCESS_KEY
+    secret_access_key:
+      secure: $AWS_SECRET_KEY 
+
+
